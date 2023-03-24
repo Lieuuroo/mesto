@@ -1,0 +1,12 @@
+.popup__form-imput-container {
+  border: none;
+  padding: 0;
+  width: 238px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1280px) {
+  .popup__form-imput-container {
+    width: 358px;
+  }
+}

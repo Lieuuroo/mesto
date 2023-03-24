@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Mesto</title>
+  </head>
+
+  <body class="page">
+    <header class="header">
+      <div class="header__logo"></div>
+    </header>
+    <main class="content">
+      <section class="profile">
+        <img
+          class="profile__avatar"
+          src="./images/profile-avatar.png"
+          alt="фото профиля"
+        />
+        <div class="profile__info">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button class="profile__edit-button"></button>
+          <p class="profile__subtitle">Исследователь океана</p>
+        </div>
+        <button class="profile__add-button"></button>
+      </section>
+      <section class="cards">
+        <div class="cards__item">
+          <img
+            class="cards__photo"
+            src="./images/cards-pervushino.jpg"
+            alt="фото"
+          />
+          <div class="cards__info">
+            <p class="cards__location-name">Первушино</p>
+            <button class="cards__like-button"></button>
+          </div>
+        </div>
+        <div class="cards__item">
+          <img
+            class="cards__photo"
+            src="./images/cards-taganay.jpg"
+            alt="фото"
+          />
+          <div class="cards__info">
+            <p class="cards__location-name">Таганай</p>
+            <button class="cards__like-button"></button>
+          </div>
+        </div>
+        <div class="cards__item">
+          <img
+            class="cards__photo"
+            src="./images/cards-prokopyevsk.jpg"
+            alt="фото"
+          />
+          <div class="cards__info">
+            <p class="cards__location-name">Прокопьевск</p>
+            <button class="cards__like-button"></button>
+          </div>
+        </div>
+        <div class="cards__item">
+          <img
+            class="cards__photo"
+            src="./images/cards-elbrus.png"
+            alt="фото"
+          />
+          <div class="cards__info">
+            <p class="cards__location-name">Гора Эльбрус</p>
+            <button class="cards__like-button"></button>
+          </div>
+        </div>
+        <div class="cards__item">
+          <img
+            class="cards__photo"
+            src="./images/cards-dombai.png"
+            alt="фото"
+          />
+          <div class="cards__info">
+            <p class="cards__location-name">Домбай</p>
+            <button class="cards__like-button"></button>
+          </div>
+        </div>
+        <div class="cards__item">
+          <img
+            class="cards__photo"
+            src="./images/cards-karachaevsk.png"
+            alt="фото"
+          />
+          <div class="cards__info">
+            <p class="cards__location-name">Карачаево-Черкессия</p>
+            <button class="cards__like-button"></button>
+          </div>
+        </div>
+      </section>
+      <section class="popup">
+        <div class="popup__form">
+          <button class="popup__close-button"></button>
+          <h2 class="popup__form-heading">Редактировать профиль</h2>
+          <form class="popup__form-imput-container">
+            <input
+              type="text"
+              value="Жак-Ив Кусто"
+              class="popup__form-item popup__form-item_el_name"
+            />
+            <input
+              type="text"
+              value="Исследователь океана"
+              class="popup__form-item popup__form-item_el_job"
+            />
+          </form>
+          <button class="popup__form-save-button">Сохранить</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">© 2023 Mesto Russia</p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
