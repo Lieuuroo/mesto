@@ -9,7 +9,6 @@
   .profile__info {
     margin: auto 0;
     justify-content: unset;
-    min-width: 580px;
-    align-self: stretch;
+    max-width: 580px;
   }
 }

@@ -1,7 +1,6 @@
 .profile {
   max-width: 282px;
   margin: 42px auto 36px;
-  font-family: 'Inter', Arial, sans-serif;
   display: flex;
   flex-direction: column;
 }

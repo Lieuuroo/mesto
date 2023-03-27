@@ -20,7 +20,8 @@
     line-height: 48px;
     text-align: unset;
     margin: 0 18px 0 0;
-    max-width: 520px;
     padding-left: 0;
+    min-width: 294px;
+    max-width: 538px;
   }
 }

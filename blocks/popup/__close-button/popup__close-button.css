@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   position: absolute;
   top: -36px;
-  left: 262px;
+  right: 0px;
 }
 
 .popup__close-button:hover {
@@ -22,6 +22,6 @@
   width: 32px;
   height: 32px;
   top: -40px;
-  left: 438px;
+  right: -40px;
 }
 }

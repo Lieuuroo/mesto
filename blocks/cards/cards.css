@@ -1,5 +1,4 @@
 .cards {
-  font-family: 'Inter', Arial, sans-serif;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -12,5 +11,6 @@
     margin: 0 auto 66px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 17px;
   }
 }
