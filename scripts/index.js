@@ -101,9 +101,6 @@ const openPopup = (popup) => {
 const handleAddCardSubmit = (evt) => {
   evt.preventDefault();
 
-  const placeInput = cardForm.querySelector(".popup__form-item_el_place");
-  const linkInput = cardForm.querySelector(".popup__form-item_el_link");
-
   const name = placeInput.value;
   const link = linkInput.value;
 
