@@ -3,7 +3,7 @@ const popupDisplay = document.querySelector(".popup_type_edit-profile");
 const profileName = document.querySelector(".profile__name");
 const profileSubtitle = document.querySelector(".profile__subtitle");
 const buttonClosePopup = document.querySelector(".popup__close-button");
-const formElement = document.querySelector(".popup__form-imput-container");
+const formEditProfile = document.querySelector(".popup__form-imput-container");
 const nameInput = document.querySelector(".popup__form-item_el_name");
 const jobInput = document.querySelector(".popup__form-item_el_job");
 const placeInput = document.querySelector(".popup__form-item_el_place");
@@ -43,7 +43,7 @@ const closePopup = (popup) => {
   popup.removeEventListener("click", closePopupClickingOverlay);
 };
 
-function handleFormSubmit(evt) {
+function submitEditProfileForm(evt) {
   evt.preventDefault();
 
   profileName.textContent = nameInput.value;
@@ -103,17 +103,15 @@ const openPopup = (popup) => {
 };
 
 function closePopupPressingEsc(evt) {
-  const popupOpened = document.querySelector(".popup_opened");
-
   if (evt.key === "Escape") {
+    const popupOpened = document.querySelector(".popup_opened");
     closePopup(popupOpened);
   }
 }
 
 function closePopupClickingOverlay(event) {
-  const popupOpened = document.querySelector(".popup_opened");
-
   if (event.target === event.currentTarget) {
+    const popupOpened = document.querySelector(".popup_opened");
     closePopup(popupOpened);
   }
 }
@@ -139,7 +137,7 @@ const fillPhotoCloseupPopup = (cardInfo) => {
   photoCloseupName.textContent = cardInfo.name;
 };
 
-formElement.addEventListener("submit", handleFormSubmit);
+formEditProfile.addEventListener("submit", submitEditProfileForm);
 
 buttonClosePopup.addEventListener("click", () => {
   closePopup(popupDisplay);

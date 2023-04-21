@@ -56,13 +56,15 @@ const enableValidation = (config) => {
   formList.forEach((form) => {
     form.addEventListener("submit", (evt) => {
       evt.preventDefault();
+      form.reset();
+      toggleButtonValidity(config, form);
     });
     toggleButtonValidity(config, form);
     setEventListeners(config, form);
   });
 };
 
-enableValidation({
+const validationConfig = enableValidation({
   formSelector: ".popup__form-imput-container",
   inputSelector: ".popup__form-item",
   submitButtonSelector: ".popup__form-save-button",
