@@ -39,6 +39,8 @@ function openEditProfilePopup() {
 
 const closePopup = (popup) => {
   popup.classList.remove("popup_opened");
+  document.removeEventListener("keydown", closePopupPressingEsc);
+  popup.removeEventListener("click", closePopupClickingOverlay);
 };
 
 function handleFormSubmit(evt) {
@@ -96,7 +98,25 @@ initialCards.forEach((card) => {
 
 const openPopup = (popup) => {
   popup.classList.add("popup_opened");
+  document.addEventListener("keydown", closePopupPressingEsc);
+  popup.addEventListener("click", closePopupClickingOverlay);
 };
+
+function closePopupPressingEsc(evt) {
+  const popupOpened = document.querySelector(".popup_opened");
+
+  if (evt.key === "Escape") {
+    closePopup(popupOpened);
+  }
+}
+
+function closePopupClickingOverlay(event) {
+  const popupOpened = document.querySelector(".popup_opened");
+
+  if (event.target === event.currentTarget) {
+    closePopup(popupOpened);
+  }
+}
 
 const handleAddCardSubmit = (evt) => {
   evt.preventDefault();
